@@ -22,13 +22,13 @@ mycat.c
     
     $ cat /etc/passwd  
     root:\x:0:0:root:/root:/bin/bash  
-    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
-    bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+    daemon:\x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+    bin:\x:2:2:bin:/bin:/usr/sbin/nologin  
     ...  
     $ ./mycat /etc/passwd  
-    root:x:0:0:root:/root:/bin/bash  
-    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
-    bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+    root:\x:0:0:root:/root:/bin/bash  
+    daemon:\x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+    bin:\x:2:2:bin:/bin:/usr/sbin/nologin  
     ...
     
 
@@ -40,15 +40,15 @@ mycp.c
 *   要求使用系统调用open/read/write/close实现
     
     $ cat /etc/passwd  
-    root:x:0:0:root:/root:/bin/bash  
-    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
-    bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+    root:\x:0:0:root:/root:/bin/bash  
+    daemon:\x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+    bin:\x:2:2:bin:/bin:/usr/sbin/nologin  
     ...  
     $ ./mycp /etc/passwd passwd.bak  
     $ cat passwd.bak  
-    root:x:0:0:root:/root:/bin/bash  
-    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
-    bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+    root:\x:0:0:root:/root:/bin/bash  
+    daemon:\x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+    bin:\x:2:2:bin:/bin:/usr/sbin/nologin  
     ...  
     
 
