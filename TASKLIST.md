@@ -58,14 +58,14 @@
         return 0;  
     }
 
-*   测试程序的输出结果  
-    --------------------------------------------------  
-    HELLO WORLD  
-    --------------------------------------------------  
-    bin    core  home	     lib	 mnt   root  snap  tmp	vmlinuz  
-    boot   dev   initrd.img      lost+found  opt   run   srv   usr	vmlinuz.old  
-    cdrom  etc   initrd.img.old  media	 proc  sbin  sys   var  
-    --------------------------------------------------  
+*    测试程序的输出结果  
+     --------------------------------------------------  
+     HELLO WORLD  
+     --------------------------------------------------  
+     bin    core  home	     lib	 mnt   root  snap  tmp	vmlinuz  
+     boot   dev   initrd.img      lost+found  opt   run   srv   usr	vmlinuz.old  
+     cdrom  etc   initrd.img.old  media	 proc  sbin  sys   var  
+     --------------------------------------------------  
     
 ## sh1.c: 实现shell程序，要求具备如下功能
 *   支持命令参数  
