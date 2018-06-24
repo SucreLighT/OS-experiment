@@ -4,42 +4,42 @@
 *   myecho.c的功能与系统echo程序相同
 *   接受命令行参数，并将参数打印出来，例子如下：
 
-    $ ./myecho x
-    x
-    $ ./myecho a b c
-    a b c
+    $ ./myecho x  
+    x  
+    $ ./myecho a b c  
+    a b c  
 ## mycat.c
 *   mycat.c的功能与系统cat程序相同
 *   mycat将指定的文件内容输出到屏幕，例子如下：
 *   要求使用系统调用open/read/write/close实现
 
-    $ cat /etc/passwd 
-    root:x:0:0:root:/root:/bin/bash
-    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-    bin:x:2:2:bin:/bin:/usr/sbin/nologin
-    ...
-    $ ./mycat /etc/passwd 
-    root:x:0:0:root:/root:/bin/bash
-    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-    bin:x:2:2:bin:/bin:/usr/sbin/nologin
-    ...
+    $ cat /etc/passwd  
+    root:x:0:0:root:/root:/bin/bash  
+    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+    bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+    ...  
+    $ ./mycat /etc/passwd   
+    root:x:0:0:root:/root:/bin/bash  
+    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+    bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+    ...  
 mycp.c
 ## mycp.c
 *   mycp.c的功能与系统cp程序相同
 *   将源文件复制到目标文件，例子如下：
 *   要求使用系统调用open/read/write/close实现
 
-    $ cat /etc/passwd
-    root:x:0:0:root:/root:/bin/bash
-    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-    bin:x:2:2:bin:/bin:/usr/sbin/nologin
-    ...
-    $ ./mycp /etc/passwd passwd.bak 
-    $ cat passwd.bak
-    root:x:0:0:root:/root:/bin/bash
-    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-    bin:x:2:2:bin:/bin:/usr/sbin/nologin
-    ...
+    $ cat /etc/passwd  
+    root:x:0:0:root:/root:/bin/bash  
+    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+    bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+    ...  
+    $ ./mycp /etc/passwd passwd.bak   
+    $ cat passwd.bak  
+    root:x:0:0:root:/root:/bin/bash  
+    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+    bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+    ...  
 # 多进程题目
 
 ## mysys.c: 实现函数mysys，用于执行一个系统命令，要求如下
@@ -47,25 +47,26 @@ mycp.c
 *   使用fork/exec/wait系统调用实现mysys
 *   不能通过调用系统函数system实现mysys
 *   测试程序
-#include <stdio.h>
 
-int main()
-{
-    printf("--------------------------------------------------\n");
-    system("echo HELLO WORLD");
-    printf("--------------------------------------------------\n");
-    system("ls /");
-    printf("--------------------------------------------------\n");
-    return 0;
+#include <stdio.h>  
+int main()  
+{  
+    printf("--------------------------------------------------\n");  
+    system("echo HELLO WORLD");  
+    printf("--------------------------------------------------\n");  
+    system("ls /");   
+    printf("--------------------------------------------------\n");  
+    return 0;  
 }
-*   测试程序的输出结果
---------------------------------------------------
-HELLO WORLD
---------------------------------------------------
-bin    core  home	     lib	 mnt   root  snap  tmp	vmlinuz
-boot   dev   initrd.img      lost+found  opt   run   srv   usr	vmlinuz.old
-cdrom  etc   initrd.img.old  media	 proc  sbin  sys   var
---------------------------------------------------
+
+*   测试程序的输出结果  
+--------------------------------------------------  
+HELLO WORLD  
+--------------------------------------------------  
+bin    core  home	     lib	 mnt   root  snap  tmp	vmlinuz  
+boot   dev   initrd.img      lost+found  opt   run   srv   usr	vmlinuz.old  
+cdrom  etc   initrd.img.old  media	 proc  sbin  sys   var  
+--------------------------------------------------  
 ## sh1.c: 实现shell程序，要求具备如下功能
 *   支持命令参数
     $ echo arg1 arg2 arg3
