@@ -12,7 +12,6 @@
 *   mycat.c的功能与系统cat程序相同
 *   mycat将指定的文件内容输出到屏幕，例子如下：
 *   要求使用系统调用open/read/write/close实现
-
     $ cat /etc/passwd  
     root:x:0:0:root:/root:/bin/bash  
     daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
@@ -23,7 +22,7 @@
     daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
     bin:x:2:2:bin:/bin:/usr/sbin/nologin  
     ...  
-mycp.c
+
 ## mycp.c
 *   mycp.c的功能与系统cp程序相同
 *   将源文件复制到目标文件，例子如下：
