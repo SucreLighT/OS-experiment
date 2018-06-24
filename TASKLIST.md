@@ -7,10 +7,10 @@ myecho.c
 *   myecho.c的功能与系统echo程序相同
 *   接受命令行参数，并将参数打印出来，例子如下：
     
-    $ ./myecho x
-    x
-    $ ./myecho a b c
-    a b c
+    $ ./myecho x  
+    x  
+    $ ./myecho a b c  
+    a b c  
     
 
 mycat.c
@@ -20,15 +20,15 @@ mycat.c
 *   mycat将指定的文件内容输出到屏幕，例子如下：
 *   要求使用系统调用open/read/write/close实现
     
-    $ cat /etc/passwd 
-    root:x:0:0:root:/root:/bin/bash
-    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-    bin:x:2:2:bin:/bin:/usr/sbin/nologin
-    ...
-    $ ./mycat /etc/passwd 
-    root:x:0:0:root:/root:/bin/bash
-    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-    bin:x:2:2:bin:/bin:/usr/sbin/nologin
+    $ cat /etc/passwd  
+    root:x:0:0:root:/root:/bin/bash  
+    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+    bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+    ...  
+    $ ./mycat /etc/passwd  
+    root:x:0:0:root:/root:/bin/bash  
+    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+    bin:x:2:2:bin:/bin:/usr/sbin/nologin  
     ...
     
 
@@ -39,17 +39,17 @@ mycp.c
 *   将源文件复制到目标文件，例子如下：
 *   要求使用系统调用open/read/write/close实现
     
-    $ cat /etc/passwd
-    root:x:0:0:root:/root:/bin/bash
-    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-    bin:x:2:2:bin:/bin:/usr/sbin/nologin
-    ...
-    $ ./mycp /etc/passwd passwd.bak 
-    $ cat passwd.bak
-    root:x:0:0:root:/root:/bin/bash
-    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-    bin:x:2:2:bin:/bin:/usr/sbin/nologin
-    ...
+    $ cat /etc/passwd  
+    root:x:0:0:root:/root:/bin/bash  
+    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+    bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+    ...  
+    $ ./mycp /etc/passwd passwd.bak  
+    $ cat passwd.bak  
+    root:x:0:0:root:/root:/bin/bash  
+    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+    bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+    ...  
     
 
 多进程题目
@@ -65,25 +65,25 @@ mysys.c: 实现函数mysys，用于执行一个系统命令，要求如下
     
     #include <stdio.h>
     
-    int main()
-    {
-        printf("--------------------------------------------------\\n");
-        system("echo HELLO WORLD");
-        printf("--------------------------------------------------\\n");
-        system("ls /");
-        printf("--------------------------------------------------\\n");
-        return 0;
-    }
+    int main()  
+    {  
+        printf("--------------------------------------------------\\n");  
+        system("echo HELLO WORLD");  
+        printf("--------------------------------------------------\\n");  
+        system("ls /");  
+        printf("--------------------------------------------------\\n");  
+        return 0;  
+    }  
     
 *   测试程序的输出结果
     
-    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-    HELLO WORLD
-    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-    bin    core  home	     lib	 mnt   root  snap  tmp	vmlinuz
-    boot   dev   initrd.img      lost+found  opt   run   srv   usr	vmlinuz.old
-    cdrom  etc   initrd.img.old  media	 proc  sbin  sys   var
-    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-  
+    HELLO WORLD  
+    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-  
+    bin    core  home	     lib	 mnt   root  snap  tmp	vmlinuz  
+    boot   dev   initrd.img      lost+found  opt   run   srv   usr	vmlinuz.old  
+    cdrom  etc   initrd.img.old  media	 proc  sbin  sys   var  
+    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-  
     
 
 sh1.c: 实现shell程序，要求具备如下功能
@@ -91,14 +91,14 @@ sh1.c: 实现shell程序，要求具备如下功能
 
 *   支持命令参数
     
-    $ echo arg1 arg2 arg3
-    $ ls /bin /usr/bin /home
+    $ echo arg1 arg2 arg3  
+    $ ls /bin /usr/bin /home  
     
 *   实现内置命令cd、pwd、exit
     
-    $ cd /bin
-    $ pwd
-    /bin
+    $ cd /bin  
+    $ pwd  
+    /bin  
     
 
 sh2.c: 实现shell程序，要求在第1版的基础上，添加如下功能
@@ -106,9 +106,9 @@ sh2.c: 实现shell程序，要求在第1版的基础上，添加如下功能
 
 *   实现文件重定向
     
-    $ echo hello >log
-    $ cat log
-    hello
+    $ echo hello >log  
+    $ cat log  
+    hello  
     
 
 sh3.c: 实现shell程序，要求在第2版的基础上，添加如下功能
@@ -120,18 +120,18 @@ sh3.c: 实现shell程序，要求在第2版的基础上，添加如下功能
     
 *   实现管道和文件重定向
     
-    $ cat input.txt
-    3
-    2
-    1
-    3
-    2
-    1
-    $ cat <input.txt | sort | uniq | cat >output.txt
-    $ cat output.txt
-    1
-    2
-    3
+    $ cat input.txt  
+    3  
+    2  
+    1  
+    3  
+    2  
+    1  
+    $ cat <input.txt | sort | uniq | cat >output.txt  
+    $ cat output.txt  
+    1  
+    2  
+    3  
     
 
 多线程题目
