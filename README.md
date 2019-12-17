@@ -1,12 +1,12 @@
 **操作系统实验源码**  
 题目见TASKLIST  
 网址：[http://www.linuxmooc.com/task.html](http://www.linuxmooc.com/task.html)  
-#作业提交
+# 作业提交
 1. 请在本站提供的linux虚拟机中完成作业，作业会保存在服务器中
 2. 不要改变作业文件的文件名
 
-#文件读写编程题目
-###myecho.c
+# 文件读写编程题目
+### myecho.c
 * myecho.c的功能与系统echo程序相同
 * 接受命令行参数，并将参数打印出来，例子如下：  
 $ ./myecho x  
@@ -24,7 +24,7 @@ daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin  
 ...  
 $ ./mycat /etc/passwd  
-root:x:0:0:root:/root:/bin/bash  
+root\:x:0:0:root:/root:/bin/bash  
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
 bin:x:2:2:bin:/bin:/usr/sbin/nologin  
 ...
@@ -34,7 +34,7 @@ bin:x:2:2:bin:/bin:/usr/sbin/nologin
 * 将源文件复制到目标文件，例子如下：
 * 要求使用系统调用open/read/write/close实现  
 $ cat /etc/passwd  
-root:x:0:0:root:/root:/bin/bash  
+root\:x:0:0:root:/root:/bin/bash  
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
 bin:x:2:2:bin:/bin:/usr/sbin/nologin  
 ...  
