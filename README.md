@@ -20,13 +20,13 @@ a b c
 * 要求使用系统调用open/read/write/close实现  
 $ cat /etc/passwd  
 root: x:0:0:root:/root:/bin/bash  
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
-bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+daemon: x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+bin: x:2:2:bin:/bin:/usr/sbin/nologin  
 ...  
 $ ./mycat /etc/passwd  
 root: x:0:0:root:/root:/bin/bash  
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
-bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+daemon: x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+bin: x:2:2:bin:/bin:/usr/sbin/nologin  
 ...
   
 ### mycp.c
@@ -34,15 +34,15 @@ bin:x:2:2:bin:/bin:/usr/sbin/nologin
 * 将源文件复制到目标文件，例子如下：
 * 要求使用系统调用open/read/write/close实现  
 $ cat /etc/passwd  
-root\:x:0:0:root:/root:/bin/bash  
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
-bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+root: x:0:0:root:/root:/bin/bash  
+daemon: x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+bin: x:2:2:bin:/bin:/usr/sbin/nologin  
 ...  
 $ ./mycp /etc/passwd passwd.bak   
 $ cat passwd.bak  
-root:x:0:0:root:/root:/bin/bash  
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
-bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+root: x:0:0:root:/root:/bin/bash  
+daemon: x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+bin: x:2:2:bin:/bin:/usr/sbin/nologin  
 ...  
 
 
@@ -87,9 +87,9 @@ $ ./sh
 a b c  
 \# sh1打印提示符>，同时读取用户输入的命令cat，并执行输出结果  
 \> cat /etc/passwd  
-root:x:0:0:root:/root:/bin/bash  
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
-bin:x:2:2:bin:/bin:/usr/sbin/nologin  
+root: x:0:0:root:/root:/bin/bash  
+daemon: x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+bin: x:2:2:bin:/bin:/usr/sbin/nologin  
 请考虑如何实现内置命令cd、pwd、exit  
 
 ### sh2.c: 实现shell程序，要求在第1版的基础上，添加如下功能
